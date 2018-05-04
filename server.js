@@ -6,7 +6,9 @@ const {GraphQLObjectType, GraphQLString } = graphql;
 const ArtistType = new GraphQLObjectType({
 	name: 'Artist',
 	fields: () => ({
-		id: { type: GraphQLString }
+		id: { type: GraphQLString },
+		name: { type: GraphQLString },
+		genres: { type: [GraphQLString] },
 	})
 	// fields:
 	// type Query {
@@ -100,6 +102,8 @@ var root = {
 };
 
 const app = express();
+app.set('view engine', 'pug');
+
 app.use('/graphql', graphqlHTTP({
 	schema: ArtistType, //required
 	rootValue: root,
@@ -107,7 +111,7 @@ app.use('/graphql', graphqlHTTP({
 }));
 
 app.get('/', function(req, res) {
-  res.send('This is the root page of the Graph QL app' + '<br/><br/>' + 'Navigate to <b>localhost:8000/graphql</b> to play with GraphiQL');
+	res.render('index', { title: 'ArtistQL', message: 'ArtistQL Landing Page: Navigate to localhost:8000/graphql to play with GraphiQL'})
 });
 
 app.listen(
