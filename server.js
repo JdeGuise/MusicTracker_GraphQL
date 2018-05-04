@@ -106,6 +106,10 @@ app.use('/graphql', graphqlHTTP({
 	graphiql: true
 }));
 
+app.get('/', function(req, res) {
+  res.send('This is the root page of the Graph QL app' + '<br/><br/>' + 'Navigate to <b>localhost:8000/graphql</b> to play with GraphiQL');
+});
+
 app.listen(
 	8000,
 	() => console.log("Express GraphQL Server is Now Running on localhost:8000/graphql")
