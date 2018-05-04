@@ -1,26 +1,36 @@
-var express = require("express");
-var express_graphql = require("express-graphql");
-var {buildSchema} = require('graphql');
+const express = require("express");
+const graphqlHTTP = require("express-graphql");
+const graphql = require('graphql');
+const {GraphQLObjectType, GraphQLString } = graphql;
 
-var schema = buildSchema(`
-	type Query {
-		artist(id: Int!): Artist
-		artists(description: String!): [Artist]
-	},
-	type Mutation {
-		updateArtistDescription(id: Int!, description: String!): Artist
-	},
-	type Artist {
-		id: Int,
-		name: String,
-		genres: [String],
-		description: String,
-		url: String,
-		instruments: [String],
-		associatedActs: [String],
-		activeYears: String
-	}
-`);
+const ArtistType = new GraphQLObjectType({
+	name: 'Artist',
+	fields: () => ({
+		id: { type: GraphQLString }
+	})
+	// fields:
+	// type Query {
+	// 	artist(id: Int!): Artist
+	// 	artists(description: String!): [Artist]
+	// },
+	// type Mutation {
+	// 	updateArtistDescription(id: Int!, description: String!): Artist
+	// },
+	// type Artist {
+	// 	id: Int,
+	// 	name: String,
+	// 	genres: [String],
+	// 	description: String,
+	// 	url: String,
+	// 	instruments: [String],
+	// 	associatedActs: [String],
+	// 	activeYears: String
+	// }
+});
+
+// var schema2 = buildSchema(`
+
+// `);
 
 var artistsData = [
 	{
@@ -89,9 +99,9 @@ var root = {
 	//message: () => 'Hello World!'
 };
 
-var app = express();
-app.use('/graphql', express_graphql({
-	schema: schema,
+const app = express();
+app.use('/graphql', graphqlHTTP({
+	schema: ArtistType, //required
 	rootValue: root,
 	graphiql: true
 }));
