@@ -168,6 +168,18 @@ const RootQuery = new GraphQLObjectType({
 						resolve(parent, args) {
 							return _.find(albums, { id: args.id });
 						}
+				},
+				albums: {
+						type: new GraphQLList(AlbumType),
+						resolve(parent, args) {
+							return albums;
+						}
+				},
+				artists: {
+						type: new GraphQLList(ArtistType),
+						resolve(parent, args) {
+							return artists;
+						}
 				}
     }
 });
