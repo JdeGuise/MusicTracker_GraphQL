@@ -53,6 +53,12 @@ const albums = [
 		name: "The Hand that Thieves",
 		releaseYear: 2013,
 		artistId: '1'
+	},
+	{
+		id: '8',
+		name: "Keasbey Nights",
+		releaseYear: 2006,
+		artistId: '5'
 	}
 ];
 
@@ -136,6 +142,12 @@ const ArtistType = new GraphQLObjectType({
 				instruments: { type: new GraphQLList(GraphQLString) },
 				associatedActs: { type: new GraphQLList(GraphQLString) },
 				activeYears: { type: GraphQLString },
+				albums: {
+					type: new GraphQLList(AlbumType),
+					resolve(parent, args) {
+						return _.filter(albums, { artistId: parent.id })
+					}
+				}
     })
 });
 
