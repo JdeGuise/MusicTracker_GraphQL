@@ -3,6 +3,7 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 // components
 import AlbumList from './components/AlbumList';
+import ArtistList from './components/ArtistList';
 
 // apollo client setup
 const client = new ApolloClient({
@@ -16,6 +17,7 @@ class App extends Component {
         <div className="main">
           <h1>Goose's List of Music</h1>
           <AlbumList/>
+          <ArtistList/>
         </div>
       </ApolloProvider>
     );
