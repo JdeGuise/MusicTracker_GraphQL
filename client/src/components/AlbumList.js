@@ -11,12 +11,24 @@ const getAlbumsQuery = gql`
   }
 `
 class AlbumList extends Component {
+  displayAlbums() {
+    var data = this.props.data;
+    if(data.loading) {
+      return(<div>Loading books...</div>);
+    } else {
+      return data.albums.map(album => {
+        return(
+          <li key={album.id}> { album.name } </li>
+        );
+      });
+    }
+  }
   render() {
     console.log(this.props);
     return (
       <div className="main">
         <ul id="album-list">
-          <li>Test album name</li>
+          { this.displayAlbums() }
         </ul>
       </div>
     );
