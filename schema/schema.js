@@ -11,7 +11,8 @@ const {
 	GraphQLID,
 	GraphQLSchema,
 	GraphQLList,
-	GraphQLInt
+	GraphQLInt,
+	GraphQLNonNull
 } = graphql;
 
 const AlbumType = new GraphQLObjectType({
@@ -87,13 +88,13 @@ const Mutation = new GraphQLObjectType({
 			addArtist: {
 				type: ArtistType,
 				args: {
-					name: { type: GraphQLString },
-					genres: { type: new GraphQLList(GraphQLString) },
-					url: { type: GraphQLString },
-					instruments: { type: new GraphQLList(GraphQLString) },
-					associatedActs: { type: new GraphQLList(GraphQLString) },
-					activeYears: { type: GraphQLString },
-					description: { type: GraphQLString }
+					name: { type: new GraphQLNonNull(GraphQLString) },
+					genres: { type: new GraphQLNonNull(new GraphQLList(GraphQLString)) },
+					url: { type: new GraphQLNonNull(GraphQLString) },
+					instruments: { type: new GraphQLNonNull(new GraphQLList(GraphQLString)) },
+					associatedActs: { type: new GraphQLNonNull(new GraphQLList(GraphQLString)) },
+					activeYears: { type: new GraphQLNonNull(GraphQLString) },
+					description: { type: new GraphQLNonNull(GraphQLString) }
 				},
 				resolve(parent, args) {
 					let artist = new Artist({
@@ -110,9 +111,9 @@ const Mutation = new GraphQLObjectType({
 			addAlbum: {
 				type: AlbumType,
 				args: {
-					name: { type: GraphQLString },
-					releaseYear: { type: GraphQLInt },
-					artistId: { type: GraphQLID }
+					name: { type: new GraphQLNonNull(GraphQLString) },
+					releaseYear: { type: new GraphQLNonNull(GraphQLInt) },
+					artistId: { type: new GraphQLNonNull(GraphQLID) }
 				},
 				resolve(parent, args) {
 					let album = new Album({
