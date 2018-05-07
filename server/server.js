@@ -20,9 +20,9 @@ app.use('/graphql', graphqlHTTP({
 	graphiql: true
 }));
 app.get('/', function(req, res) {
-	res.render('index', { title: 'ArtistQL', message: 'ArtistQL Landing Page: Navigate to localhost:8000/graphql to play with GraphiQL', link1: "http://localhost:8000/graphql"})
+	res.render('index', { title: 'ArtistQL', message: 'ArtistQL Landing Page: Navigate to localhost:4000/graphql to play with GraphiQL', link1: "http://localhost:4000/graphql"})
 });
 app.listen(
-	8000,
-	() => {console.log("Express GraphQL Server is Now Running on localhost:8000/graphql")}
+	4000,
+	() => {console.log("Express GraphQL Server is Now Running on localhost:4000/graphql")}
 );
