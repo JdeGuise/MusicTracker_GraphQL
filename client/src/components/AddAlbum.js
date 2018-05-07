@@ -45,7 +45,8 @@ class AddAlbum extends Component {
             { this.displayArtists() }
           </select>
         </div>
-        <button>+</button>
+        <br/>
+        <button>Add Album</button>
       </form>
     );
   }
