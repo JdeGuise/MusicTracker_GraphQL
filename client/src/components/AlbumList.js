@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
+import { getAlbumsQuery } from '../queries/queries';
 
-const getAlbumsQuery = gql`
-  {
-    albums {
-      name
-      id
-    }
-  }
-`
 class AlbumList extends Component {
   displayAlbums() {
     var data = this.props.data;

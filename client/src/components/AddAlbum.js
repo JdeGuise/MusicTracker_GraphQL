@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
-import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
-
-const getArtistsQuery = gql`
-  {
-    artists {
-      name
-      id
-    }
-  }
-`
+import { getArtistsQuery } from '../queries/queries';
 
 class AddAlbum extends Component {
   displayArtists() {
