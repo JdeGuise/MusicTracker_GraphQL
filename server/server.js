@@ -16,6 +16,7 @@ mongoose.connection.once('open', () => {
 
 //todo: 'connect to sql' implementation
 
+app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
 app.use('/graphql', graphqlHTTP({
 	schema: schema, //required
