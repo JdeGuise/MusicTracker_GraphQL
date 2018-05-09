@@ -7,8 +7,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
 
-const SERVER_PORT = process.env.PORT || 4000;
-const SERVER_ADDRESS = "http://localhost:"+ SERVER_PORT + "/graphql";
+const SERVER_PORT = config.PORT || 4000;
+const SERVER_ADDRESS = config.SERVER_ADDRESS;
 
 // allow cross-origin requests
 app.use(cors());
@@ -40,6 +40,6 @@ app.get('/', function(req, res) {
 
 // listen for new connections to the server
 app.listen(
-	4000,
+	SERVER_PORT,
 	() => {console.log("Express GraphQL Server is Now Running on " + SERVER_ADDRESS)}
 );
