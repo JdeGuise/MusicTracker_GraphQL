@@ -57,5 +57,12 @@ typings/
 # dotenv environment variables file
 .env
 
+# client package-lock
+package-lock.*
+package.*
+
+# we want to ignore subsequent commits of config.js
+config.js
+
 # Mac-specific
 .DS_Store
