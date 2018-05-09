@@ -54,7 +54,7 @@ class AddAlbum extends Component {
           </select>
         </div>
         <br/>
-        <button>Add Album</button>
+        <button>Add</button>
       </form>
     );
   }

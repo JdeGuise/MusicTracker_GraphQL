@@ -74,7 +74,7 @@ class AddArtist extends Component {
           <input type="text" onChange={ (e) => this.setState({ associatedActs: e.target.value })}/>
         </div>
         <br/>
-        <button>Add Artist</button>
+        <button>Add</button>
       </form>
     );
   }
