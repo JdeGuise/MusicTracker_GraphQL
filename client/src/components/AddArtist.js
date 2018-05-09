@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { graphql } from 'react-apollo';
-import { getAlbumsQuery } from '../queries/queries';
+import { graphql, compose } from 'react-apollo';
+import { getAlbumsQuery, addArtistMutation } from '../queries/queries';
 
 class AddArtist extends Component {
   constructor(props) {
@@ -8,16 +8,26 @@ class AddArtist extends Component {
     this.state = {
       name: "",
       description: "",
-      genres: "",
-      instruments: "",
+      genres: [],
+      instruments: [],
       url: "",
       activeYears: "",
-      associatedActs: ""
+      associatedActs: []
     };
   }
   submitForm(e) {
     e.preventDefault();
-    console.log(this.state);
+    this.props.addArtistMutation({
+      variables: {
+        name: this.state.name,
+        description: this.state.description,
+        genres: this.state.genres,
+        instruments: this.state.instruments,
+        url: this.state.url,
+        activeYears: this.state.activeYears,
+        associatedActs: this.state.associatedActs
+      }
+    });
   }
   displayAlbums() {
     var data = this.props.data;
@@ -69,4 +79,7 @@ class AddArtist extends Component {
   }
 }
 
-export default graphql(getAlbumsQuery)(AddArtist)
+export default compose(
+  graphql(getAlbumsQuery, { name: "getAlbumsQuery" }),
+  graphql(addArtistMutation, { name: "addArtistMutation" })
+)(AddArtist)

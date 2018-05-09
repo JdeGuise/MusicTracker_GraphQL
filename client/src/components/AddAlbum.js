@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { graphql } from 'react-apollo';
-import { getArtistsQuery } from '../queries/queries';
+import { graphql, compose } from 'react-apollo';
+import { getArtistsQuery, addAlbumMutation } from '../queries/queries';
 
 class AddAlbum extends Component {
   constructor(props) {
@@ -13,10 +13,17 @@ class AddAlbum extends Component {
   }
   submitForm(e) {
     e.preventDefault();
-    console.log(this.state);
+    this.props.addAlbumMutation({
+      variables: {
+        name: this.state.name,
+        releaseYear: this.state.releaseYear,
+        artistId: this.state.artistId
+      }
+    });
   }
   displayArtists() {
-    var data = this.props.data;
+    var data = this.props.getArtistsQuery;
+    console.log(this.props);
     if(data.loading) {
       return(
         <option disabled>Loading Artists... </option>
@@ -52,4 +59,7 @@ class AddAlbum extends Component {
   }
 }
 
-export default graphql(getArtistsQuery)(AddAlbum)
+export default compose(
+  graphql(getArtistsQuery, { name: "getArtistsQuery" }),
+  graphql(addAlbumMutation, { name: "addAlbumMutation" })
+)(AddAlbum)
