@@ -21,6 +21,7 @@ mongoose.connection.once('open', () => {
 
 //todo: 'connect to sql' implementation
 
+// express view setup
 app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
 app.use('/graphql', graphqlHTTP({
@@ -28,6 +29,7 @@ app.use('/graphql', graphqlHTTP({
 	graphiql: true
 }));
 
+// root path setup
 app.get('/', function(req, res) {
 	res.render('index', {
 			title: 'ArtistQL',
@@ -36,6 +38,7 @@ app.get('/', function(req, res) {
 	})
 });
 
+// listen for new connections to the server
 app.listen(
 	4000,
 	() => {console.log("Express GraphQL Server is Now Running on " + SERVER_ADDRESS)}
