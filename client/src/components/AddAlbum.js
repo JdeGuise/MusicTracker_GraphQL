@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { graphql, compose } from 'react-apollo';
-import { getArtistsQuery, addAlbumMutation } from '../queries/queries';
+import { getArtistsQuery, getAlbumsQuery, addAlbumMutation } from '../queries/queries';
 
 class AddAlbum extends Component {
   constructor(props) {
@@ -18,7 +18,8 @@ class AddAlbum extends Component {
         name: this.state.name,
         releaseYear: this.state.releaseYear,
         artistId: this.state.artistId
-      }
+      },
+      refetchQueries: [{query: getAlbumsQuery}]
     });
   }
   displayArtists() {
