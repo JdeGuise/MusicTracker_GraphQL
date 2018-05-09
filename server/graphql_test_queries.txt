@@ -1,7 +1,0 @@
-# add artist with one field, and return name from artist record
-mutation{
-  addArtist(
-    name: "Creedence Clearwater Revival") {
-    name
-  }
-}
