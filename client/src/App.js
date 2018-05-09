@@ -15,19 +15,14 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <div className="main">
+        <div id="main">
           <h1>Goose's List of Music</h1>
-          <hr/>
           <h2>Artist List</h2>
           <ArtistList/>
-          <br/>
           <h2>Album List</h2>
           <AlbumList/>
-          <br/>
-          <br/>
           <h2>Add Artist</h2>
           <AddArtist/>
-          <br/>
           <h2>Add Album</h2>
           <AddAlbum/>
         </div>
