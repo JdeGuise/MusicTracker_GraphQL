@@ -22,7 +22,7 @@ A miniature full stack app for adding and retrieving song and album information 
     npm start
 
 
-### Setup Database - mongodb
+### Database Setup - mongodb
 1. Create a free account on mlab.com and log in.
 2. Create a database, give it a name.
 3. Create a user with a password on mlab.
