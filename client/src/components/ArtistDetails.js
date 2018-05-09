@@ -13,4 +13,12 @@ class ArtistDetails extends Component {
   }
 }
 
-export default graphql(getArtistQuery)(ArtistDetails);
+export default graphql(getArtistQuery, {
+  options: (props) => {
+    return {
+      variables: {
+        id: props.artistId
+      }
+    }
+  }
+})(ArtistDetails);

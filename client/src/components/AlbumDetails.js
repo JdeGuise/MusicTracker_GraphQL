@@ -7,10 +7,18 @@ class AlbumDetails extends Component {
     console.log(this.props);
     return (
       <div id="album-details">
-        <p>Output album details here.</p>
+        <p>Album details here.</p>
       </div>
     );
   }
 }
 
-export default graphql(getAlbumQuery)(AlbumDetails);
+export default graphql(getAlbumQuery, {
+  options: (props) => {
+    return {
+      variables: {
+        id: props.albumId
+      }
+    }
+  }
+})(AlbumDetails);
