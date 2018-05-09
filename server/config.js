@@ -1,0 +1,3 @@
+module.exports = {
+  MONGO_DB_ADDRESS: "mongodb://MONGO_DB_USER:MONGO_DB_PASS@MONGO_DB_SERVER_URL/MONGO_DB_NAME"
+};
