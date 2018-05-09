@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { getArtistsQuery } from '../queries/queries';
 
+
+//components
+import ArtistDetails from './ArtistDetails';
 class ArtistList extends Component {
   displayArtists() {
     var data = this.props.data;
@@ -22,6 +25,7 @@ class ArtistList extends Component {
         <ul id="artist-list">
           { this.displayArtists() }
         </ul>
+        <ArtistDetails />
       </div>
     );
   }

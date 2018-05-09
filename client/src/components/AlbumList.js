@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { getAlbumsQuery } from '../queries/queries';
 
+//components
+import ArtistDetails from './ArtistDetails';
+
 class AlbumList extends Component {
   displayAlbums() {
     var data = this.props.data;

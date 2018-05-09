@@ -36,4 +36,48 @@ const addArtistMutation = gql`
   }
 `
 
-export { getArtistsQuery, getAlbumsQuery, addAlbumMutation, addArtistMutation };
+const getArtistQuery = gql`
+  query($id: ID){
+    artist(id: $id) {
+      id
+      name
+      description
+      instruments
+      associatedActs
+      activeYears
+      genres
+      url
+      albums{
+        id
+        name
+        releaseYear
+      }
+    }
+  }
+`
+
+const getAlbumQuery = gql`
+  query($id: ID) {
+    album(id: $id) {
+      id
+      name
+      releaseYear
+      artist {
+        id
+        name
+        description
+        instruments
+        associatedActs
+        activeYears
+        genres
+        url
+        albums {
+          name
+          id
+        }
+      }
+    }
+  }
+`
+
+export { getArtistsQuery, getAlbumsQuery, addAlbumMutation, addArtistMutation, getArtistQuery };
