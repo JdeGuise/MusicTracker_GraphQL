@@ -34,7 +34,7 @@ app.get('/', function(req, res) {
 	res.render('index', {
 			title: 'ArtistQL',
 			message: 'ArtistQL Landing Page: Navigate to ' + SERVER_ADDRESS + ' to play with GraphiQL',
-			link1: SERVER_ADDRESS
+			mongoDbLink: SERVER_ADDRESS
 	})
 });
 

@@ -1,11 +1,13 @@
+doctype html
 html(lang='en')
   head
     meta(name='description', content='ArtistQL App')
     meta(name='author', content='John deGuise')
     meta(charset='utf-8')
+    //link(href='./../css/style.css', type='text/css', rel="stylesheet")
     style
       include ../css/styles.css
     title= title
   body
-    h1
-      a(href=link1) Go to GraphQL
+    h1(id="goto-graphql")
+      a(href=mongoDbLink) Go to GraphQL
