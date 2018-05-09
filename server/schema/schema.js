@@ -104,6 +104,7 @@ const Mutation = new GraphQLObjectType({
 					instruments: args.instruments,
 					associatedActs: args.associatedActs,
 					activeYears: args.activeYears,
+					description: args.description
 				});
 				return artist.save();
 			}
