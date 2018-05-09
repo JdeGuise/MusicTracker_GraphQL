@@ -80,4 +80,4 @@ const getAlbumQuery = gql`
   }
 `
 
-export { getArtistsQuery, getAlbumsQuery, addAlbumMutation, addArtistMutation, getArtistQuery };
+export { getArtistsQuery, getAlbumsQuery, addAlbumMutation, addArtistMutation, getArtistQuery, getAlbumQuery };
