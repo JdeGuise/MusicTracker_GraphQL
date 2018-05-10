@@ -11,11 +11,12 @@ exports.post = function (req, res) {
     headers: true,
     ignoreEmpty: true
   }).on("data", function(data){
+    data['genres'] = data['genres'].split('; ');
+    data['instruments'] = data['instruments'].split('; ');
+    data['associatedActs'] = data['associatedActs'].split('; ');
     artists.push(data);
-    console.log(artists);
   }).on("end", function(){
     Artist.create(artists, function(err, documents) {
-      console.log(documents);
       if (err){ throw err; }
     });
     res.send(artists.length + ' artists have been successfully uploaded.');

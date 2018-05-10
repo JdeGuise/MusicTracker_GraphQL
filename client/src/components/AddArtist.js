@@ -51,7 +51,7 @@ class AddArtist extends Component {
         </div>
         <div className="field">
           <label>Genre (just one for now): </label>
-          <input type="text" onChange={ (e) => this.setState({ genres: e.target.value })}/>
+          <input type="text" onChange={ (e) => this.setState({ genres: e.target.value.split('; ') })}/>
         </div>
         <div className="field">
           <label>Description: </label>
@@ -59,7 +59,7 @@ class AddArtist extends Component {
         </div>
         <div className="field">
           <label>Instruments: </label>
-          <input type="text" onChange={ (e) => this.setState({ instruments: e.target.value })}/>
+          <input type="text" onChange={ (e) => this.setState({ instruments: e.target.value.split('; ') })}/>
         </div>
         <div className="field">
           <label>URL: </label>
@@ -71,7 +71,7 @@ class AddArtist extends Component {
         </div>
         <div className="field">
           <label>Associated Acts: </label>
-          <input type="text" onChange={ (e) => this.setState({ associatedActs: e.target.value })}/>
+          <input type="text" onChange={ (e) => this.setState({ associatedActs: e.target.value.split('; ') })}/>
         </div>
         <br/>
         <button>Add</button>
