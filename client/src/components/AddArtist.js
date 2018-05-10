@@ -29,6 +29,7 @@ class AddArtist extends Component {
       },
       refetchQueries: [{ query: getArtistsQuery }]
     });
+    document.getElementById('add-artist').reset();
   }
   displayAlbums() {
     var data = this.props.data;
