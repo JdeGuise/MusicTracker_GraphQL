@@ -11,12 +11,12 @@ class ArtistDetails extends Component {
           <h1 class="music-detail"> { artist.name } </h1>
           <br/>
 
-          <u><h2>Artist Site</h2></u>
-          <h3> { artist.url } </h3>
-          <br/>
-
-          <u><h2> Active Years </h2></u>
-          <h3> { artist.activeYears } </h3>
+          <u><h2> Instruments </h2></u>
+          <ul className="artist-instruments" >
+            { artist.instruments.map(instrument => {
+              return <li key={instrument}>{instrument}</li>
+            })}
+          </ul>
           <br/>
 
           <u><h2> Genres </h2></u>
@@ -27,14 +27,13 @@ class ArtistDetails extends Component {
           </ul>
           <br/>
 
-          <u><h2> Instruments </h2></u>
-          <ul className="artist-instruments" >
-            { artist.instruments.map(instrument => {
-              return <li key={instrument}>{instrument}</li>
-            })}
-          </ul>
+          <u><h2>Description</h2></u> <p> { artist.description } </p>
           <br/>
 
+          <u><h2> Active Years </h2></u>
+          <h3> { artist.activeYears } </h3>
+          <br/>
+          
           <u><h2>Associated Acts</h2></u>
           <ul className="artist-associatedActs" >
             { artist.associatedActs.map(act => {
@@ -43,7 +42,8 @@ class ArtistDetails extends Component {
           </ul>
           <br/>
 
-          <u><h2>Description</h2></u> <p> { artist.description } </p>
+          <u><h2>Artist URL</h2></u>
+          <h3> { artist.url } </h3>
           <br/>
 
           <u><h2>Artist's Albums</h2></u>
