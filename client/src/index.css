@@ -15,6 +15,10 @@ body {
   height: 100%;
 }
 
+#album-list li:hover, #artist-list li:hover {
+  background: rgb(200, 200, 255);
+}
+
 #album-list, #artist-list {
   padding: 0;
 }
