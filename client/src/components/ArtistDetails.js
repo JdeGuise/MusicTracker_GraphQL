@@ -51,7 +51,6 @@ class ArtistDetails extends Component {
     }
   }
   render() {
-    console.log(this.props);
     return (
       <div id="artist-details">
         { this.displayArtistDetails() }

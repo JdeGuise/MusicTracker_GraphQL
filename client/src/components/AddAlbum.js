@@ -25,7 +25,6 @@ class AddAlbum extends Component {
   }
   displayArtists() {
     var data = this.props.getArtistsQuery;
-    console.log(this.props);
     if(data.loading) {
       return(
         <option disabled>Loading Artists... </option>
