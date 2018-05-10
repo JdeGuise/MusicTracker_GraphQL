@@ -1,5 +1,5 @@
 body {
-  background-color: #eef;
+  background-color: rgb(235,235,235);
   font-family: "Roboto";
 }
 
@@ -76,7 +76,7 @@ form button {
   right: 0;
   width: 40%;
   height: 100%;
-  background: #4D5D53;
+  background: rgb(0,0,0);
   padding: 30px;
   overflow: auto;
   box-shadow: -2px -3px 5px rgba(0,0,0,.3);
