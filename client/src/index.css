@@ -52,9 +52,21 @@ form {
   width: 500px;
 }
 
+form button {
+  color: white;
+  font-size: 2em;
+  background: #AD1457;
+  border: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+} */
+
 form .field {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: .25fr .5fr;
   grid-gap: 10px;
 }
 
@@ -69,17 +81,11 @@ form select, form input {
   box-sizing: border-box;
 }
 
-form button {
-  color: white;
-  font-size: 2em;
-  background: #AD1457;
-  border: 0;
-  padding: 0 10px;
-  cursor: pointer;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-} */
+.form-divs {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
 
 #album-details, #artist-details {
   position: fixed;

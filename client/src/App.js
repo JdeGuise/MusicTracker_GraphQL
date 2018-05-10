@@ -23,10 +23,17 @@ class App extends Component {
           <ArtistList/>
           <h2>Album List</h2>
           <AlbumList/>
-          <h2>Add Artist</h2>
-          <AddArtist/>
-          <h2>Add Album</h2>
-          <AddAlbum/>
+          <hr/>
+          <div>
+            <div class='form-divs'>
+              <h2>New Artist</h2>
+              <AddArtist/>
+            </div>
+            <div class='form-divs'>
+              <h2>New Album</h2>
+              <AddAlbum/>
+            </div>
+          </div>
         </div>
       </ApolloProvider>
     );
