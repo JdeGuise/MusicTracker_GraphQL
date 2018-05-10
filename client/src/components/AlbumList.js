@@ -12,6 +12,10 @@ class AlbumList extends Component {
       selected: null
     }
   }
+  toggleOnAlbum() {
+    document.getElementById('artist-details').style.display = 'none';
+    document.getElementById('album-details').style.display = 'inline';
+  }
   displayAlbums() {
     var data = this.props.data;
     if(data.loading) {
@@ -19,7 +23,7 @@ class AlbumList extends Component {
     } else {
       return data.albums.map(album => {
         return(
-          <li key={album.id} onClick={ (e) => { this.setState({ selected: album.id })}}> { album.name } </li>
+          <li key={album.id} onClick={ (e) => { this.setState({ selected: album.id }); this.toggleOnAlbum();}}> { album.name } </li>
         );
       });
     }
