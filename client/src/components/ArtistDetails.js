@@ -8,35 +8,45 @@ class ArtistDetails extends Component {
     if(artist) {
       return(
         <div>
-          <h1> { artist.name } </h1>
-          <h3>Artist Site</h3> <p> { artist.url } </p>
-          <h3> Active Years </h3> <p> { artist.activeYears } </p>
+          <h1 class="music-detail"> { artist.name } </h1>
+          <br/>
 
-          <h3> Genres </h3>
+          <u><h2>Artist Site</h2></u>
+          <h3> { artist.url } </h3>
+          <br/>
+
+          <u><h2> Active Years </h2></u>
+          <h3> { artist.activeYears } </h3>
+          <br/>
+
+          <u><h2> Genres </h2></u>
           <ul className="artist-genres" >
             { artist.genres.map(genre => {
               return <li key={genre}>{genre}</li>
             })}
           </ul>
+          <br/>
 
-          <h3> Instruments </h3>
+          <u><h2> Instruments </h2></u>
           <ul className="artist-instruments" >
             { artist.instruments.map(instrument => {
               return <li key={instrument}>{instrument}</li>
             })}
           </ul>
+          <br/>
 
-          <h3>Associated Acts</h3>
+          <u><h2>Associated Acts</h2></u>
           <ul className="artist-associatedActs" >
             { artist.associatedActs.map(act => {
               return <li key={act}>{act}</li>
             })}
           </ul>
-
-          <h3>Description</h3> <p> { artist.description } </p>
-
           <br/>
-          <h4>All albums by this artist:</h4>
+
+          <u><h2>Description</h2></u> <p> { artist.description } </p>
+          <br/>
+
+          <u><h2>Artist's Albums</h2></u>
           <ul className="artist-albums">
             { artist.albums.map(item => {
               return <li key={ item.id }>{item.name}</li>

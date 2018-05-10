@@ -4,8 +4,11 @@ body {
 }
 
 #main h1{
-  color: #000060;
   text-align: center;
+}
+
+#main {
+  color: rgb(95, 95, 95);
 }
 
 #main {
@@ -32,6 +35,10 @@ body {
   box-shadow: 1px 2px 3px rgba(0,0,0,.3);
   cursor: pointer;
   color: #880E4F;
+}
+
+.music-detail {
+  color: white;
 }
 
 
@@ -80,7 +87,7 @@ form button {
   right: 0;
   width: 40%;
   height: 100%;
-  background: rgb(0,0,0);
+  background: rgb(60,60,60);
   padding: 30px;
   overflow: auto;
   box-shadow: -2px -3px 5px rgba(0,0,0,.3);

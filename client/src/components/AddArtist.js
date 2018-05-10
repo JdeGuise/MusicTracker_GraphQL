@@ -47,32 +47,32 @@ class AddArtist extends Component {
     return (
       <form id="add-artist" onSubmit={ this.submitForm.bind(this) }>
         <div className="field">
-          <label>Artist name: </label>
+          <label>Name: </label>
           <input type="text" onChange={ (e) => this.setState({ name: e.target.value })} />
-        </div>
-        <div className="field">
-          <label>Genre (just one for now): </label>
-          <input type="text" onChange={ (e) => this.setState({ genres: e.target.value.split('; ') })}/>
-        </div>
-        <div className="field">
-          <label>Description: </label>
-          <input type="text" onChange={ (e) => this.setState({ description: e.target.value })}/>
         </div>
         <div className="field">
           <label>Instruments: </label>
           <input type="text" onChange={ (e) => this.setState({ instruments: e.target.value.split('; ') })}/>
         </div>
         <div className="field">
-          <label>URL: </label>
-          <input type="text" onChange={ (e) => this.setState({ url: e.target.value })}/>
+          <label>Genres: </label>
+          <input type="text" onChange={ (e) => this.setState({ genres: e.target.value.split('; ') })}/>
+        </div>
+        <div className="field">
+          <label>Artist Description: </label>
+          <input type="text" onChange={ (e) => this.setState({ description: e.target.value })}/>
         </div>
         <div className="field">
           <label>Active Years: </label>
           <input type="text" onChange={ (e) => this.setState({ activeYears: e.target.value })}/>
-        </div>
+        </div>        
         <div className="field">
           <label>Associated Acts: </label>
           <input type="text" onChange={ (e) => this.setState({ associatedActs: e.target.value.split('; ') })}/>
+        </div>
+        <div className="field">
+          <label>URL: </label>
+          <input type="text" onChange={ (e) => this.setState({ url: e.target.value })}/>
         </div>
         <br/>
         <button>Add</button>

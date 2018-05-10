@@ -39,19 +39,19 @@ class AddAlbum extends Component {
     return (
       <form id="add-album" onSubmit={ this.submitForm.bind(this) }>
         <div className="field">
+          <label>Artist: </label>
+          <select onChange={ (e) => this.setState({ artistId: e.target.value })}>
+            <option>Select artist</option>
+            { this.displayArtists() }
+          </select>
+        </div>
+        <div className="field">
           <label>Album name: </label>
           <input type="text" onChange={ (e) => this.setState({ name: e.target.value })} />
         </div>
         <div className="field">
           <label>Release Year: </label>
           <input type="text" onChange={ (e) => this.setState({ releaseYear: e.target.value })}/>
-        </div>
-        <div className="field">
-          <label>Artist: </label>
-          <select onChange={ (e) => this.setState({ artistId: e.target.value })}>
-            <option>Select artist</option>
-            { this.displayArtists() }
-          </select>
         </div>
         <br/>
         <button>Add</button>
