@@ -9,7 +9,6 @@ const cors = require('cors');
 const template = require('./template.js');
 const upload = require('./upload.js');
 const app = express();
-
 const SERVER_PORT = config.PORT || 4000;
 const SERVER_ADDRESS = config.SERVER_ADDRESS;
 
@@ -34,6 +33,8 @@ app.use('/graphql', graphqlHTTP({
 	schema: schema, //required
 	graphiql: true
 }));
+app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/bower_components'));
 
 // root path setup - csv uploader
 app.get('/', function(req, res) {
