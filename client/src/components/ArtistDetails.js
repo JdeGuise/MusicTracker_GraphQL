@@ -44,7 +44,7 @@ class ArtistDetails extends Component {
           <br/>
 
           <u><h2>Artist URL</h2></u>
-          <h3> { artist.url } </h3>
+          <a href={ artist.url } id="artist-url"><h3>{artist.url}</h3></a>
           <br/>
 
           <u><h2>Artist&apos;s Albums</h2></u>

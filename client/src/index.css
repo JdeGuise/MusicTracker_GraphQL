@@ -25,7 +25,7 @@ body {
 }
 
 #album-form {
-  margin-top: 15px
+  margin-top: 15px;
 }
 
 #album-form {
@@ -112,12 +112,12 @@ form select, form input {
   display: none;
 }
 
-#artist-back, #album-back {
+#artist-back, #album-back, #artist-url {
   text-decoration: none;
   color: white;
 }
 
-#artist-back:hover, #album-back:hover {
+#artist-back:hover, #album-back:hover, #artist-url:hover {
   color: rgb(200, 200, 255);
 }
 
