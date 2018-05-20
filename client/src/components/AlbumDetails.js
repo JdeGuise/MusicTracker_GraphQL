@@ -35,9 +35,9 @@ class AlbumDetails extends Component {
   }
   render() {
     return (
-      <div id="album-details">
-        { this.displayAlbumDetails() }
-      </div>
+        <div id="album-details">
+          { this.displayAlbumDetails() }
+        </div>
     );
   }
 }

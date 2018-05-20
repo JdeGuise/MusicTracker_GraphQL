@@ -1,6 +1,8 @@
 body {
   background-color: rgb(235,235,235);
   font-family: "Roboto";
+  padding: 5px;
+  margin: 5px;
 }
 
 #main h1{
@@ -8,22 +10,17 @@ body {
 }
 
 #main {
-  color: rgb(95, 95, 95);
-}
-
-#main {
-  padding: 0px;
+  color: #880E4F;
+  background: lightgrey;
+  border: 2px solid grey;
+  padding: 30px;
   box-sizing: border-box;
-  width: 60%;
+  width: 100%;
   height: 100%;
 }
 
 #album-list li:hover, #artist-list li:hover {
   background: rgb(200, 200, 255);
-}
-
-#album-list, #artist-list {
-  padding: 0;
 }
 
 #album-list li, #artist-list li {
@@ -40,8 +37,6 @@ body {
 .music-detail {
   color: white;
 }
-
-
 
 /*
 form {
@@ -94,9 +89,11 @@ form select, form input {
   width: 40%;
   height: 100%;
   background: rgb(60,60,60);
+  border: 1px solid black;
   padding: 30px;
   overflow: auto;
   box-shadow: -2px -3px 5px rgba(0,0,0,.3);
   box-sizing: border-box;
   color: #fff;
+  display: none;
 }

@@ -62,9 +62,9 @@ class ArtistDetails extends Component {
   }
   render() {
     return (
-      <div id="artist-details">
-        { this.displayArtistDetails() }
-      </div>
+        <div id="artist-details">
+          { this.displayArtistDetails() }
+        </div>
     );
   }
 }
