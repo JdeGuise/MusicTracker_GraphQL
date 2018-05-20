@@ -8,6 +8,7 @@ class ArtistDetails extends Component {
     if(artist) {
       return(
         <div>
+          <a href="../" id="artist-back">Back</a>
           <h1 className="music-detail"> { artist.name } </h1>
           <br/>
 
@@ -62,9 +63,9 @@ class ArtistDetails extends Component {
   }
   render() {
     return (
-        <div id="artist-details">
-          { this.displayArtistDetails() }
-        </div>
+      <div id="artist-details">
+        { this.displayArtistDetails() }
+      </div>
     );
   }
 }

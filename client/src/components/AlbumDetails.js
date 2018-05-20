@@ -8,6 +8,7 @@ class AlbumDetails extends Component {
     if(album) {
       return(
         <div>
+          <a href="../" id="artist-back">Back</a>
           <h1 className="music-detail"> { album.name } </h1>
           <br/>
 

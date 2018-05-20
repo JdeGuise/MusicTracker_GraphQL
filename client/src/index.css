@@ -97,11 +97,22 @@ form select, form input {
   display: none;
 }
 
+#artist-back, #album-back {
+  text-decoration: none;
+  color: white;
+}
+
+#artist-back:hover, #album-back:hover {
+  color: lightgrey;
+}
+
 /* mobile */
 @media only screen and (max-width: 760px) {
   #artist-details, #album-details, #main {
     width: 100%;
-    display: inline;
+  }
+  #artist-back {
+    display: inline-block;
   }
 }
 
@@ -113,5 +124,8 @@ form select, form input {
 
   #main {
     width: 100%;
+  }
+  #artist-back {
+    display: none;
   }
 }
