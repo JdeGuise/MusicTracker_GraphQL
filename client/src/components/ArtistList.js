@@ -50,7 +50,8 @@ class ArtistList extends Component {
   }
   render() {
     return (
-      <div className="main">
+      <div id="artist-main">
+        <h2>Artist List</h2>
         <ul id="artist-list">
           { this.displayArtists() }
         </ul>

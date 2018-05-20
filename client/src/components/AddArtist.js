@@ -46,6 +46,7 @@ class AddArtist extends Component {
   render() {
     return (
       <form id="add-artist" onSubmit={ this.submitForm.bind(this) }>
+        <h2>New Artist</h2>
         <div className="field">
           <label>Name: </label>
           <input type="text" onChange={ (e) => this.setState({ name: e.target.value })} />

@@ -18,18 +18,19 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <div id="main">
-          <h2>Artist List</h2>
           <ArtistList/>
-          <h2>Album List</h2>
+          <br/>
           <AlbumList/>
+          <br/>
           <hr/>
+          <br/>
           <div>
             <div className='form-divs'>
-              <h2>New Artist</h2>
               <AddArtist/>
             </div>
+            <br/>
+            <br/>
             <div className='form-divs'>
-              <h2>New Album</h2>
               <AddAlbum/>
             </div>
           </div>

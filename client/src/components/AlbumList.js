@@ -51,7 +51,8 @@ class AlbumList extends Component {
   }
   render() {
     return (
-      <div className="main">
+      <div id="album-main">
+        <h2>Album List</h2>
         <ul id="album-list">
           { this.displayAlbums() }
         </ul>

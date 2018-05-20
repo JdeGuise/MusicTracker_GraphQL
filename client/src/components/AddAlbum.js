@@ -38,6 +38,7 @@ class AddAlbum extends Component {
   render() {
     return (
       <form id="add-album" onSubmit={ this.submitForm.bind(this) }>
+        <h2>New Album</h2>
         <div className="field">
           <label>Artist: </label>
           <select onChange={ (e) => this.setState({ artistId: e.target.value })}>

@@ -19,6 +19,11 @@ body {
   height: 100%;
 }
 
+#artist-main, #album-main {
+  border: 1px solid grey;
+  padding: 5px;
+}
+
 #album-list li:hover, #artist-list li:hover {
   background: rgb(200, 200, 255);
 }
@@ -38,26 +43,28 @@ body {
   color: white;
 }
 
-/*
 form {
-  background: #FFF;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 500px;
+  border: 1px solid grey;
+  padding: 10px;
 }
 
 form button {
-  color: white;
-  font-size: 2em;
-  background: #AD1457;
+  font-size: 1.5em;
+  background: lightgrey;
   border: 0;
   padding: 0 10px;
   cursor: pointer;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-} */
+  border-radius: 4px;
+
+  border: 1px solid #880E4F;
+  box-shadow: 1px 2px 3px rgba(0,0,0,.3);
+  cursor: pointer;
+  color: #880E4F;
+}
+
+form button:hover {
+  background: rgb(200, 200, 255);
+}
 
 form .field {
   display: grid;
@@ -66,7 +73,7 @@ form .field {
 }
 
 form label {
-  text-align: right;
+  text-align: left;
   padding: 10px;
 }
 
@@ -103,7 +110,7 @@ form select, form input {
 }
 
 #artist-back:hover, #album-back:hover {
-  color: lightgrey;
+  color: rgb(200, 200, 255);
 }
 
 /* mobile */
