@@ -10,7 +10,7 @@ import AddArtist from './components/AddArtist';
 
 // apollo client setup
 const client = new ApolloClient({
-  uri: 'http://192.168.0.103:4000/graphql'
+  uri: 'http://jdowned.madhacker.biz:4000/graphql'
 });
 
 class App extends Component {
