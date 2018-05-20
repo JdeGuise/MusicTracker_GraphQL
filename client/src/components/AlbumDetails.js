@@ -19,7 +19,7 @@ class AlbumDetails extends Component {
           <h3> { album.releaseYear } </h3>
           <br/>
 
-          <u><h2>Artist's Albums</h2></u>
+          <u><h2>Artist&apos;s Albums</h2></u>
           <ul className="other-albums">
             { album.artist.albums.map(item => {
               return <li key={ item.id }>{item.name}</li>

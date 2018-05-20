@@ -46,7 +46,7 @@ class ArtistDetails extends Component {
           <h3> { artist.url } </h3>
           <br/>
 
-          <u><h2>Artist's Albums</h2></u>
+          <u><h2>Artist&apos;s Albums</h2></u>
           <ul className="artist-albums">
             { artist.albums.map(item => {
               return <li key={ item.id }>{item.name}</li>
