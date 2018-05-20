@@ -25,12 +25,10 @@ class App extends Component {
           <hr/>
           <br/>
           <div>
-            <div className='form-divs'>
+            <div className='form-divs' id="artist-form">
               <AddArtist/>
             </div>
-            <br/>
-            <br/>
-            <div className='form-divs'>
+            <div className='form-divs' id="album-form">
               <AddAlbum/>
             </div>
           </div>

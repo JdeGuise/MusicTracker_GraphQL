@@ -24,6 +24,14 @@ body {
   padding: 5px;
 }
 
+#album-form {
+  margin-top: 15px
+}
+
+#album-form {
+  margin-bottom: 15px;
+}
+
 #album-list li:hover, #artist-list li:hover {
   background: rgb(200, 200, 255);
 }
