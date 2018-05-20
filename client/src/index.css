@@ -86,7 +86,6 @@ form select, form input {
   position: fixed;
   top: 0;
   right: 0;
-  width: 40%;
   height: 100%;
   background: rgb(60,60,60);
   border: 1px solid black;
@@ -96,4 +95,23 @@ form select, form input {
   box-sizing: border-box;
   color: #fff;
   display: none;
+}
+
+/* mobile */
+@media only screen and (max-width: 760px) {
+  #artist-details, #album-details, #main {
+    width: 100%;
+    display: inline;
+  }
+}
+
+/* web */
+@media only screen and (min-width: 761px) {
+  #artist-details, #album-details {
+    width: 40%;
+  }
+
+  #main {
+    width: 100%;
+  }
 }
