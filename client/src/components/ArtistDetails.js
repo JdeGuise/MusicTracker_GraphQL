@@ -8,7 +8,7 @@ class ArtistDetails extends Component {
     if(artist) {
       return(
         <div>
-          <h1 class="music-detail"> { artist.name } </h1>
+          <h1 className="music-detail"> { artist.name } </h1>
           <br/>
 
           <u><h2> Instruments </h2></u>
@@ -33,7 +33,7 @@ class ArtistDetails extends Component {
           <u><h2> Active Years </h2></u>
           <h3> { artist.activeYears } </h3>
           <br/>
-          
+
           <u><h2>Associated Acts</h2></u>
           <ul className="artist-associatedActs" >
             { artist.associatedActs.map(act => {

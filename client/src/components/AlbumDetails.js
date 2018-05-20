@@ -8,7 +8,7 @@ class AlbumDetails extends Component {
     if(album) {
       return(
         <div>
-          <h1 class="music-detail"> { album.name } </h1>
+          <h1 className="music-detail"> { album.name } </h1>
           <br/>
 
           <u><h2> Artist</h2></u>

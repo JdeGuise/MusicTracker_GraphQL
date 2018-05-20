@@ -7,7 +7,7 @@ exports.post = function (req, res) {
   var artistFile = req.files.file;
   var artists = [];
 
-  csv.fromString(artistFile.data.toString(), {
+  csv.fromString(artistFile.data.toString(), { 
     headers: true,
     ignoreEmpty: true
   }).on("data", function(data){

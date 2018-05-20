@@ -21,6 +21,8 @@ class AlbumList extends Component {
     if(data.loading) {
       return(<div>Loading albums...</div>);
     } else {
+      console.log("album data");
+      console.log(data);
       return data.albums.map(album => {
         return(
           <li key={album.id} onClick={ (e) => { this.setState({ selected: album.id }); this.toggleOnAlbum();}}> { album.name } </li>

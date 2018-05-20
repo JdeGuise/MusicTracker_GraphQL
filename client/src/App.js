@@ -10,7 +10,7 @@ import AddArtist from './components/AddArtist';
 
 // apollo client setup
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql'
+  uri: 'http://192.168.0.103:4000/graphql'
 });
 
 class App extends Component {
@@ -25,11 +25,11 @@ class App extends Component {
           <AlbumList/>
           <hr/>
           <div>
-            <div class='form-divs'>
+            <div className='form-divs'>
               <h2>New Artist</h2>
               <AddArtist/>
             </div>
-            <div class='form-divs'>
+            <div className='form-divs'>
               <h2>New Album</h2>
               <AddAlbum/>
             </div>

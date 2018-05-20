@@ -18,9 +18,12 @@ class ArtistList extends Component {
   }
   displayArtists() {
     var data = this.props.data;
+    console.log(data.loading);
     if(data.loading) {
       return(<div>Loading artists...</div>);
     } else {
+      console.log("artist data");
+      console.log(data);
       return data.artists.map(artist => {
         return(
           <li key={artist.id} onClick={ (e) => { this.setState({ selected: artist.id }); this.toggleOnArtist();}}> { artist.name } </li>

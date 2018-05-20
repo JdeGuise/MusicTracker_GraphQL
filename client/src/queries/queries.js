@@ -28,8 +28,23 @@ const addAlbumMutation = gql`
 `
 
 const addArtistMutation = gql`
-  mutation($name: String!, $description: String!, $genres: [String]!, $instruments: [String]!, $url: String!, $activeYears: String!, $associatedActs: [String]!) {
-    addArtist(name: $name, description: $description, genres: $genres, instruments: $instruments, url: $url, activeYears: $activeYears, associatedActs: $associatedActs) {
+  mutation(
+    $name: String!,
+    $description: String!,
+    $genres: [String]!,
+    $instruments: [String]!,
+    $url: String!,
+    $activeYears: String!,
+    $associatedActs: [String]!) {
+    addArtist(
+      name: $name,
+      description: $description,
+      genres: $genres,
+      instruments:
+      $instruments,
+      url: $url,
+      activeYears: $activeYears,
+      associatedActs: $associatedActs) {
       name
       id
     }
